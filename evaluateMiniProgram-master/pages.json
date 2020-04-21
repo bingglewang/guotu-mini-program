@@ -1,0 +1,35 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/evaluate/main",
+			"style": {
+				"navigationBarTitleText": "智能评估"
+			}
+		},
+		{
+			"path": "pages/result/main",
+			"style": {
+				"navigationBarTitleText": "评估结果"
+			}
+		},
+		{
+			"path": "pages/login/main",
+			"style": {
+				"navigationBarTitleText": "登录授权"
+			}
+		},
+		{
+			"path": "pages/about/main",
+			"style": {
+				"navigationBarTitleText": "联系评估"
+			}
+		}
+	],
+	"globalStyle": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#39b54a",
+		"navigationBarTitleText": "智能评估",
+		"navigationBarTextStyle": "white",
+		"enablePullDownRefresh": false
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/evaluate/main",
+    "pages/result/main",
+    "pages/login/main",
+    "pages/about/main"
+  ],
+  "subPackages": [],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "智能评估",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "定位当前位置"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap45.json"
+}

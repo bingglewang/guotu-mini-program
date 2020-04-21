@@ -1,0 +1,16 @@
+spring:
+ datasource:
+ # 连接数据库的url
+    url: jdbc:mysql://localhost:3306/dbspringboot11?useUnicode=true&characterEncoding=utf8&useSSL=true
+    # 连接数据库的用户名
+    username: root
+    # 连接数据库的密码
+    password: 12345a
+# 服务器端口号
+server:
+    port: 19902
+    servlet:
+        context-path: /guotu
+# swagger配置
+swagger:
+        isEnable: false

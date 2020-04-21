@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评估记录",
+  "usingComponents": {
+    "mp-search": "/mp-weui/packages/search/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "智能评估",
+  "usingComponents": {
+    "flixedadd": "/components/xiaosikaifa-flixedadd/xiaosikaifa-flixedadd",
+    "kefu": "/components/yu-kefu/yu-kefu"
+  }
+}
