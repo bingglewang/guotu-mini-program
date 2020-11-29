@@ -1,4 +1,5 @@
 /* eslint-disable */
+/*
 var provinceData = [{
     "label": "北京市",
     "value": "11"
@@ -134,6 +135,16 @@ var provinceData = [{
   {
     "label": "澳门",
     "value": "68"
+  },
+  {
+    "label": "钓鱼岛",
+    "value": "69"
   }
 ]
+*/
+
+var provinceData = [{
+	"label": "广东省",
+	"value": "44"
+}]
 export default provinceData;

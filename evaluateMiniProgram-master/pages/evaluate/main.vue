@@ -9,6 +9,7 @@
 			:addlistdata="addlistdata"
 			@addlisttap="addlisttap"
 		></flixedadd>
+		<simple-address ref="simpleAddress" :pickerValueDefault="cityPickerValueDefault" @onConfirm="onConfirm" themeColor="#007AFF"></simple-address>
 		<view class="container">
 			<view class="ad_popError" v-if="popErrorMsg">{{ popErrorMsg }}</view>
 			<view class="cu-form-group" style="width: 100%;border-top: 1rpx solid #eee;border-bottom: 1rpx solid #eee">
@@ -18,17 +19,17 @@
 				</picker>
 			</view> -->
 				<!-- 全国代码 -->
-				<!-- <view class="title">城市</view>
-				<picker mode="region" @change="RegionChange" :value="region">
-					<view class="picker">
+				<view class="title">城市</view>
+				<picker disabled >
+					<view class="picker" @click="openAddres2">
 						{{region[0]}}，{{region[1]}}，{{region[2]}}
 					</view>
-				</picker> -->
+				</picker>
 				<!-- 原来代码 -->
-				<view class="title">广州市</view>
+				<!-- <view class="title">广州市</view>
 				<picker @change="bindPickerChange5" :value="index5" :range="array5">
 					<view class="picker">{{ index5 > -1 ? array5[index5] : '请选择' }}</view>
-				</picker>
+				</picker> -->
 			</view>
 			<view class="form-item">
 				<view class="item-label" style="margin-left: 30upx">
@@ -122,13 +123,16 @@
 <script>
 import flixedadd from '../../components/xiaosikaifa-flixedadd/xiaosikaifa-flixedadd.vue';
 import kefu from '@/components/yu-kefu/yu-kefu.vue';
+import simpleAddress from '@/components/simple-address/simple-address.vue';
 export default {
 	components: {
 		flixedadd,
-		kefu
+		kefu,
+		simpleAddress
 	},
 	data() {
 		return {
+			cityPickerValueDefault: [18, 0, 2],
 			addlistdata: [
 				{
 					title: '在线客服',
@@ -230,6 +234,18 @@ export default {
 					}
 				});
 			}
+		},
+		openAddres2() {
+			// 根据 label 获取
+			var index = this.$refs.simpleAddress.queryIndex(this.region, 'label');
+			console.log(index);
+			this.cityPickerValueDefault = index.index;
+			this.$refs.simpleAddress.open();
+		},
+		onConfirm(e) {
+			this.region = e.labelArr;
+			this.city = this.region[1];
+			this.distinct = this.region[2];
 		},
 		RegionChange(e) {
 			this.region = e.detail.value;
